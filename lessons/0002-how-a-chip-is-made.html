@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 2 — How a Chip Is Made</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="0001-the-value-chain-where-moats-hide.html">← Lesson 01</a> · Lesson 02 · <a href="../reference/glossary.html">Glossary</a></div>
+  <p class="eyebrow">Lesson 02 · The Process</p>
+  <h1>How a Chip Is Made</h1>
+  <p class="lede">A finished chip starts as sand and ends as the most precise object humanity mass-produces. Walk the journey once, with pictures, and the abstract "value chain" from Lesson 1 becomes physical — and you'll <em>see</em> exactly where the chokepoints sit.</p>
+
+  <h2>First, the whole supply chain on one page</h2>
+  <p>The headline pipeline has four stages. Underneath it sits a layer of <strong>enabling suppliers</strong> — the companies that sell tools, machines and materials <em>into</em> the pipeline. That bottom layer is where the quietest, widest moats live.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 720 320" role="img" aria-label="Semiconductor supply chain map">
+      <!-- top pipeline -->
+      <g>
+        <rect class="svg-card" x="14" y="40" width="158" height="74" rx="8" stroke-width="1"/>
+        <text class="t-label" x="30" y="62" font-size="10">STAGE 1</text>
+        <text class="t-title" x="30" y="82" font-size="14">Design</text>
+        <text class="t-body" x="30" y="100" font-size="10.5">Fabless &amp; IDMs</text>
+
+        <rect class="svg-card" x="196" y="40" width="158" height="74" rx="8" stroke-width="1"/>
+        <text class="t-label" x="212" y="62" font-size="10">STAGE 2</text>
+        <text class="t-title" x="212" y="82" font-size="14">Fabrication</text>
+        <text class="t-body" x="212" y="100" font-size="10.5">Foundry · front-end</text>
+
+        <rect class="svg-card" x="378" y="40" width="158" height="74" rx="8" stroke-width="1"/>
+        <text class="t-label" x="394" y="62" font-size="10">STAGE 3</text>
+        <text class="t-title" x="394" y="82" font-size="14">Assembly &amp; Test</text>
+        <text class="t-body" x="394" y="100" font-size="10.5">OSAT · back-end</text>
+
+        <rect class="svg-wash" x="560" y="40" width="146" height="74" rx="8" stroke-width="1"/>
+        <text class="t-label" x="576" y="62" font-size="10">OUT</text>
+        <text class="t-title" x="576" y="82" font-size="14">End products</text>
+        <text class="t-body" x="576" y="100" font-size="10.5">Phones · cars · AI</text>
+      </g>
+      <!-- pipeline arrows -->
+      <g class="svg-flow">
+        <path d="M174 77 H194" marker-end="url(#ah)"/>
+        <path d="M356 77 H376" marker-end="url(#ah)"/>
+        <path d="M538 77 H558" marker-end="url(#ah)"/>
+      </g>
+
+      <!-- enabler band -->
+      <text class="t-label" x="14" y="168" font-size="10">ENABLING SUPPLIERS · THE PICKS &amp; SHOVELS</text>
+      <g>
+        <rect class="svg-cream" x="14" y="184" width="200" height="74" rx="8" stroke-width="1"/>
+        <text class="t-title" x="30" y="208" font-size="13">EDA &amp; IP tools</text>
+        <text class="t-mono" x="30" y="228" font-size="10.5">SNPS · CDNS · ARM</text>
+        <text class="t-body" x="30" y="246" font-size="10">software to design chips</text>
+
+        <rect class="svg-cream" x="262" y="184" width="200" height="74" rx="8" stroke-width="1"/>
+        <text class="t-title" x="278" y="208" font-size="13">Equipment (WFE)</text>
+        <text class="t-mono" x="278" y="228" font-size="10.5">ASML · AMAT · LRCX · KLAC</text>
+        <text class="t-body" x="278" y="246" font-size="10">the machines in the fab</text>
+
+        <rect class="svg-cream" x="510" y="184" width="196" height="74" rx="8" stroke-width="1"/>
+        <text class="t-title" x="526" y="208" font-size="13">Materials</text>
+        <text class="t-mono" x="526" y="228" font-size="10.5">wafers · gases · resist</text>
+        <text class="t-body" x="526" y="246" font-size="10">the consumables</text>
+      </g>
+      <!-- feed arrows up into pipeline -->
+      <g class="svg-flow" stroke-dasharray="4 4">
+        <path d="M93 184 V126 H93" marker-end="url(#ah)"/>
+        <path d="M362 184 V120" marker-end="url(#ah)"/>
+        <path d="M600 184 C600 150 280 150 275 118" marker-end="url(#ah)"/>
+      </g>
+      <text class="t-body" x="14" y="290" font-size="10.5" font-style="italic">Dashed arrows = "sells into". The enablers below power the pipeline above.</text>
+
+      <defs>
+        <marker id="ah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#c4825a"/>
+        </marker>
+      </defs>
+    </svg>
+    <figcaption>The four-stage pipeline (top) and the enabling suppliers that feed it (bottom).</figcaption>
+  </figure>
+
+  <div class="moat-lens">
+    <span class="tag">◆ Moat Lens</span>
+    <p>Notice the asymmetry: <strong>thousands</strong> of companies can design chips (top-left), but only a <strong>handful</strong> can supply EUV machines or leading-edge fabrication. Money flows <em>up</em> the diagram during every boom — which is why "sell shovels in a gold rush" so often points at the bottom row.</p>
+  </div>
+
+  <h2>From sand to a finished chip</h2>
+  <p>Stage 2 — fabrication — is the magic. Zoom into it. The raw input is literally purified sand (silicon); the output is a wafer covered in hundreds of identical chips.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 720 150" role="img" aria-label="From sand to chip">
+      <!-- sand -->
+      <g transform="translate(36,40)">
+        <path class="svg-wash" d="M6 56 L34 8 L62 56 Z" stroke-width="1"/>
+        <text class="t-body" x="34" y="84" font-size="10.5" text-anchor="middle">Quartz / sand</text>
+        <text class="t-mono" x="34" y="100" font-size="9">99.9999999% Si</text>
+      </g>
+      <!-- ingot -->
+      <g transform="translate(170,38)">
+        <ellipse class="svg-cream" cx="30" cy="12" rx="22" ry="7" stroke-width="1"/>
+        <path class="svg-cream" d="M8 12 V52 a22 7 0 0 0 44 0 V12" stroke-width="1"/>
+        <text class="t-body" x="30" y="84" font-size="10.5" text-anchor="middle">Ingot</text>
+        <text class="t-mono" x="30" y="100" font-size="9">grown crystal</text>
+      </g>
+      <!-- wafer -->
+      <g transform="translate(312,38)">
+        <circle class="svg-cream" cx="34" cy="30" r="28" stroke-width="1"/>
+        <line class="svg-line" x1="20" y1="52" x2="34" y2="58" stroke-width="1"/>
+        <text class="t-body" x="34" y="84" font-size="10.5" text-anchor="middle">Wafer</text>
+        <text class="t-mono" x="34" y="100" font-size="9">sliced disc</text>
+      </g>
+      <!-- die grid -->
+      <g transform="translate(452,40)">
+        <circle class="svg-cream" cx="34" cy="28" r="28" stroke-width="1"/>
+        <g class="svg-line" stroke-width="0.8">
+          <line x1="14" y1="8" x2="14" y2="48"/><line x1="26" y1="4" x2="26" y2="52"/>
+          <line x1="38" y1="4" x2="38" y2="52"/><line x1="50" y1="8" x2="50" y2="48"/>
+          <line x1="8" y1="16" x2="60" y2="16"/><line x1="6" y1="28" x2="62" y2="28"/>
+          <line x1="8" y1="40" x2="60" y2="40"/>
+        </g>
+        <text class="t-body" x="34" y="84" font-size="10.5" text-anchor="middle">Patterned dies</text>
+        <text class="t-mono" x="34" y="100" font-size="9">100s per wafer</text>
+      </g>
+      <!-- chip -->
+      <g transform="translate(596,42)">
+        <rect class="svg-card" x="14" y="8" width="44" height="40" rx="3" stroke-width="1"/>
+        <rect class="svg-accent-soft" x="24" y="18" width="24" height="20" rx="2"/>
+        <g stroke="#c4825a" stroke-width="1.5">
+          <line x1="14" y1="18" x2="6" y2="18"/><line x1="14" y1="28" x2="6" y2="28"/><line x1="14" y1="38" x2="6" y2="38"/>
+          <line x1="58" y1="18" x2="66" y2="18"/><line x1="58" y1="28" x2="66" y2="28"/><line x1="58" y1="38" x2="66" y2="38"/>
+        </g>
+        <text class="t-body" x="36" y="84" font-size="10.5" text-anchor="middle">Packaged chip</text>
+        <text class="t-mono" x="36" y="100" font-size="9">cut &amp; bonded</text>
+      </g>
+      <!-- arrows -->
+      <g class="svg-flow">
+        <path d="M108 64 H156" marker-end="url(#ah2)"/>
+        <path d="M242 64 H298" marker-end="url(#ah2)"/>
+        <path d="M384 64 H438" marker-end="url(#ah2)"/>
+        <path d="M526 64 H588" marker-end="url(#ah2)"/>
+      </g>
+      <defs>
+        <marker id="ah2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#c4825a"/>
+        </marker>
+      </defs>
+    </svg>
+    <figcaption>The physical journey. Stages 1–4 happen at a foundry; the last (packaging) is the OSAT step.</figcaption>
+  </figure>
+
+  <p>Here's the full sequence in words — the front-end (building the chip on the wafer) then the back-end (turning the wafer into shippable chips):</p>
+
+  <div class="stepper">
+    <div class="step">
+      <h4>Grow &amp; slice the wafer</h4>
+      <p>Purified silicon is grown into a single giant crystal (an <em>ingot</em>), then sliced into mirror-smooth discs.</p>
+      <span class="who">Materials suppliers (mostly Japanese)</span>
+    </div>
+    <div class="step">
+      <h4>Build the chip, layer by layer</h4>
+      <p>The wafer cycles through deposition → lithography → etch → doping <strong>dozens of times</strong>, stacking up transistors and wiring. This loop is the heart of the fab — diagram below.</p>
+      <span class="who">Foundry, using WFE machines</span>
+    </div>
+    <div class="step">
+      <h4>Test on the wafer</h4>
+      <p>Probes electrically test every die while still on the wafer; the duds are marked. The fraction that work is the <em>yield</em> — a make-or-break number.</p>
+      <span class="who">Foundry + test-equipment makers</span>
+    </div>
+    <div class="step">
+      <h4>Dice, package &amp; final test</h4>
+      <p>The wafer is cut into individual dies, each sealed into a protective package with electrical connections, then tested again before shipping.</p>
+      <span class="who">OSAT (back-end)</span>
+    </div>
+  </div>
+
+  <p style="font-size:0.9rem;color:var(--ink-faint);">📖 Your book《芯片战争》opens <strong>Chapter 5</strong> with this exact sequence — sand → ingot → wafer → pattern → package — and notes that of the several hundred process steps, <em>lithography is the most important</em>. That's our next focus.</p>
+
+  <h2>The heart of the fab: the photolithography loop</h2>
+  <p>Step 2 above isn't done once — it <strong>repeats for every layer of the chip</strong>, often 50–100 times. Each pass prints one layer of pattern and carves it into the wafer. This repeating loop is why fabs are so hard, so slow, and so capital-hungry.</p>
+
+  <div data-explore>
+    <figure class="fig">
+      <svg viewBox="0 0 720 230" role="img" aria-label="The photolithography cycle — tap a step">
+        <!-- clickable step boxes -->
+        <g class="loop-step" data-pick="deposit">
+          <rect class="svg-card pick-bg" x="8" y="50" width="104" height="62" rx="7" stroke-width="1"/>
+          <circle class="svg-accent" cx="24" cy="66" r="9"/><text x="24" y="70" font-size="10" text-anchor="middle" fill="#fff" class="t-mono">1</text>
+          <text class="t-title" x="14" y="92" font-size="11.5">Deposit film</text>
+          <text class="t-body" x="14" y="106" font-size="9">add a layer</text>
+        </g>
+        <g class="loop-step" data-pick="coat">
+          <rect class="svg-card pick-bg" x="126" y="50" width="104" height="62" rx="7" stroke-width="1"/>
+          <circle class="svg-accent" cx="142" cy="66" r="9"/><text x="142" y="70" font-size="10" text-anchor="middle" fill="#fff" class="t-mono">2</text>
+          <text class="t-title" x="132" y="92" font-size="11.5">Coat resist</text>
+          <text class="t-body" x="132" y="106" font-size="9">light-sensitive</text>
+        </g>
+        <g class="loop-step" data-pick="expose">
+          <rect class="svg-wash pick-bg" x="244" y="50" width="104" height="62" rx="7" stroke-width="1.5" stroke="#c4825a"/>
+          <circle class="svg-accent" cx="260" cy="66" r="9"/><text x="260" y="70" font-size="10" text-anchor="middle" fill="#fff" class="t-mono">3</text>
+          <text class="t-title" x="250" y="92" font-size="11.5">Expose</text>
+          <text class="t-mono" x="250" y="106" font-size="8.5">★ lithography</text>
+        </g>
+        <g class="loop-step" data-pick="develop">
+          <rect class="svg-card pick-bg" x="362" y="50" width="104" height="62" rx="7" stroke-width="1"/>
+          <circle class="svg-accent" cx="378" cy="66" r="9"/><text x="378" y="70" font-size="10" text-anchor="middle" fill="#fff" class="t-mono">4</text>
+          <text class="t-title" x="368" y="92" font-size="11.5">Develop</text>
+          <text class="t-body" x="368" y="106" font-size="9">reveal pattern</text>
+        </g>
+        <g class="loop-step" data-pick="etch">
+          <rect class="svg-card pick-bg" x="480" y="50" width="104" height="62" rx="7" stroke-width="1"/>
+          <circle class="svg-accent" cx="496" cy="66" r="9"/><text x="496" y="70" font-size="10" text-anchor="middle" fill="#fff" class="t-mono">5</text>
+          <text class="t-title" x="486" y="92" font-size="11.5">Etch</text>
+          <text class="t-body" x="486" y="106" font-size="9">carve it in</text>
+        </g>
+        <g class="loop-step" data-pick="strip">
+          <rect class="svg-card pick-bg" x="598" y="50" width="104" height="62" rx="7" stroke-width="1"/>
+          <circle class="svg-accent" cx="614" cy="66" r="9"/><text x="614" y="70" font-size="10" text-anchor="middle" fill="#fff" class="t-mono">6</text>
+          <text class="t-title" x="604" y="92" font-size="11.5">Strip</text>
+          <text class="t-body" x="604" y="106" font-size="9">clean off</text>
+        </g>
+        <!-- arrows between -->
+        <g class="svg-flow">
+          <path d="M112 81 H124" marker-end="url(#ah3)"/>
+          <path d="M230 81 H242" marker-end="url(#ah3)"/>
+          <path d="M348 81 H360" marker-end="url(#ah3)"/>
+          <path d="M466 81 H478" marker-end="url(#ah3)"/>
+          <path d="M584 81 H596" marker-end="url(#ah3)"/>
+        </g>
+        <!-- loop back -->
+        <path class="svg-flow" stroke-dasharray="5 4" d="M650 112 V190 H60 V112" marker-end="url(#ah3)"/>
+        <text class="t-mono" x="360" y="184" font-size="11" text-anchor="middle">↻ repeat for every layer · 50–100 times</text>
+        <text class="t-label" x="244" y="34" font-size="9.5">★ THE CHOKEPOINT STEP</text>
+        <defs>
+          <marker id="ah3" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#c4825a"/>
+          </marker>
+        </defs>
+      </svg>
+      <figcaption>One trip round the loop = one layer. A modern chip stacks 50–100 such layers.</figcaption>
+    </figure>
+    <p class="explore-hint">Tap each step in the loop to see what physically happens — and which company owns it.</p>
+
+    <div class="card exp-panel exp-empty" data-panel="">Tap a numbered step above. Pay attention to step 3 — it's the one only one company on Earth can do.</div>
+    <div class="card exp-panel" data-panel="deposit" hidden>
+      <div class="panel-head"><h4>1 · Deposit film</h4></div>
+      <p class="panel-meta">Equipment: deposition tools · <span class="ticker">AMAT · LRCX</span></p>
+      <p>A microscopically thin film (metal, insulator, or silicon) is laid across the whole wafer — the raw material of this layer. Done by deposition machines from Applied Materials and Lam Research.</p>
+    </div>
+    <div class="card exp-panel" data-panel="coat" hidden>
+      <div class="panel-head"><h4>2 · Coat with photoresist</h4></div>
+      <p class="panel-meta">Material: photoresist (mostly Japanese suppliers)</p>
+      <p>The wafer is spun and coated with a light-sensitive chemical called <span class="term" data-def="A light-sensitive coating that changes solubility where light hits it — like photographic film.">photoresist</span>. Where light hits it next, its chemistry will change.</p>
+    </div>
+    <div class="card exp-panel" data-panel="expose" hidden>
+      <div class="panel-head"><h4>3 · Expose — the lithography step</h4><span class="chokebadge">The chokepoint</span></div>
+      <p class="panel-meta">Equipment: lithography scanners · <span class="ticker">ASML (EUV: sole supplier)</span></p>
+      <p>A <span class="term" data-def="The machine that projects the circuit pattern onto the wafer using light. The hardest, priciest step.">lithography</span> machine projects the circuit pattern onto the resist using light. The smallest features need <strong>EUV light</strong>, and <mark>only ASML on the entire planet can build an EUV machine.</mark> Every leading-edge chip passes through this one box, made by one company. <em>That</em> is what a chokepoint looks like physically.</p>
+    </div>
+    <div class="card exp-panel" data-panel="develop" hidden>
+      <div class="panel-head"><h4>4 · Develop</h4></div>
+      <p class="panel-meta">Part of the litho cell · <span class="ticker">TEL (Tokyo Electron)</span></p>
+      <p>The exposed resist is washed; the light-struck parts dissolve away, leaving the pattern standing on the wafer — like developing a photograph.</p>
+    </div>
+    <div class="card exp-panel" data-panel="etch" hidden>
+      <div class="panel-head"><h4>5 · Etch</h4></div>
+      <p class="panel-meta">Equipment: etch tools · <span class="ticker">LRCX · AMAT</span></p>
+      <p>Chemicals or plasma carve away the film everywhere the resist <em>doesn't</em> protect — transferring the pattern permanently into the layer. Lam Research dominates etch.</p>
+    </div>
+    <div class="card exp-panel" data-panel="strip" hidden>
+      <div class="panel-head"><h4>6 · Strip &amp; repeat</h4></div>
+      <p class="panel-meta">Then back to step 1 — 50–100 times</p>
+      <p>The leftover resist is cleaned off. The wafer is now one layer taller — and the whole loop begins again for the next layer. Repeat 50–100 times to build the full chip.</p>
+    </div>
+  </div>
+
+  <h2>What the finished chip actually is</h2>
+  <p>The result of all those loops is a microscopic skyscraper: transistors on the ground floor, then a dense stack of copper wiring above them connecting everything.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 720 300" role="img" aria-label="Cross-section of a chip">
+      <!-- stack -->
+      <g>
+        <!-- bumps / package -->
+        <rect class="svg-wash" x="120" y="36" width="320" height="26" stroke-width="1"/>
+        <g fill="#c4825a">
+          <circle cx="160" cy="36" r="6"/><circle cx="210" cy="36" r="6"/><circle cx="260" cy="36" r="6"/>
+          <circle cx="310" cy="36" r="6"/><circle cx="360" cy="36" r="6"/><circle cx="400" cy="36" r="6"/>
+        </g>
+        <!-- metal layers (BEOL) -->
+        <rect class="svg-card" x="120" y="62" width="320" height="120" stroke-width="1"/>
+        <g class="svg-line" stroke-width="1">
+          <line x1="120" y1="86" x2="440" y2="86"/><line x1="120" y1="110" x2="440" y2="110"/>
+          <line x1="120" y1="134" x2="440" y2="134"/><line x1="120" y1="158" x2="440" y2="158"/>
+        </g>
+        <!-- vias -->
+        <g stroke="#c4825a" stroke-width="2">
+          <line x1="180" y1="62" x2="180" y2="182"/><line x1="260" y1="86" x2="260" y2="182"/>
+          <line x1="340" y1="62" x2="340" y2="158"/><line x1="400" y1="110" x2="400" y2="182"/>
+        </g>
+        <!-- transistor layer (FEOL) -->
+        <rect class="svg-accent-soft" x="120" y="182" width="320" height="40"/>
+        <g fill="#a8693f">
+          <rect x="150" y="196" width="16" height="14" rx="2"/><rect x="210" y="196" width="16" height="14" rx="2"/>
+          <rect x="270" y="196" width="16" height="14" rx="2"/><rect x="330" y="196" width="16" height="14" rx="2"/>
+          <rect x="390" y="196" width="16" height="14" rx="2"/>
+        </g>
+        <!-- substrate -->
+        <rect class="svg-cream" x="120" y="222" width="320" height="48" stroke-width="1"/>
+      </g>
+      <!-- labels -->
+      <g>
+        <line class="svg-line" x1="440" y1="49" x2="470" y2="49" stroke-width="1"/>
+        <text class="t-title" x="476" y="46" font-size="12">Package &amp; bumps</text>
+        <text class="t-body" x="476" y="61" font-size="10">connect to the outside world</text>
+
+        <line class="svg-line" x1="440" y1="122" x2="470" y2="122" stroke-width="1"/>
+        <text class="t-title" x="476" y="112" font-size="12">Wiring — 10–18 layers</text>
+        <text class="t-body" x="476" y="127" font-size="10">copper interconnect ("BEOL")</text>
+        <text class="t-body" x="476" y="141" font-size="10">most of the litho loops build this</text>
+
+        <line class="svg-line" x1="440" y1="202" x2="470" y2="202" stroke-width="1"/>
+        <text class="t-title" x="476" y="198" font-size="12">Transistors</text>
+        <text class="t-body" x="476" y="213" font-size="10">billions of switches ("FEOL")</text>
+
+        <line class="svg-line" x1="440" y1="246" x2="470" y2="246" stroke-width="1"/>
+        <text class="t-title" x="476" y="243" font-size="12">Silicon substrate</text>
+        <text class="t-body" x="476" y="258" font-size="10">the wafer itself</text>
+      </g>
+    </svg>
+    <figcaption>A chip in cross-section: transistors at the base, a tower of copper wiring above, sealed in a package. Not to scale — a real chip packs billions of transistors.</figcaption>
+  </figure>
+
+  <div class="moat-lens">
+    <span class="tag">◆ Moat Lens</span>
+    <p>Every diagram points the same way. The hardest, least-copyable steps — <strong>the Expose step (ASML), process control that keeps yield high (KLA), and running the whole loop at the leading edge (TSMC)</strong> — are exactly the links with the widest moats. When you analyse a chip stock, ask: <em>which step of this picture does the company own, and how many rivals can do that same step?</em> Few rivals → strong moat. Many → commodity.</p>
+  </div>
+
+  <h2>Check yourself</h2>
+  <p>From memory — the recall is what builds retention.</p>
+
+  <div class="quiz" data-quiz>
+    <span class="qnum">Q1</span>
+    <p class="q">Why does building a single chip take the lithography loop dozens of times instead of just once?</p>
+    <button data-correct>Each pass builds one layer; chips stack many</button>
+    <button>Each pass fixes mistakes made on the last one</button>
+    <button>Each pass tests a different chip on the wafer</button>
+    <button>Each pass adds one more chip onto the wafer</button>
+    <p class="explain" hidden>A chip is a 3D stack of 50–100 layers (transistors plus a tower of wiring). The deposit → expose → etch loop builds exactly one layer per trip, so it repeats once per layer. See the cross-section above.</p>
+  </div>
+
+  <div class="quiz" data-quiz>
+    <span class="qnum">Q2</span>
+    <p class="q">In the supply-chain map, which row tends to hold the widest, least-contested moats?</p>
+    <button data-correct>The enabling suppliers — tools and machines</button>
+    <button>The chip designers at the front of pipe</button>
+    <button>The assembly and test back-end houses</button>
+    <button>The end-product makers buying the chips</button>
+    <p class="explain" hidden>The bottom row — EDA, equipment (esp. lithography), and process control. Thousands of firms can design chips; only a handful can supply the machines. Money flows up into that row in every boom.</p>
+  </div>
+
+  <div class="quiz" data-quiz>
+    <span class="qnum">Q3</span>
+    <p class="q">"Yield," the number flagged at the wafer-test step, refers to —</p>
+    <button data-correct>the share of dies on a wafer that work</button>
+    <button>the total number of wafers a fab makes</button>
+    <button>the profit margin a foundry earns on it</button>
+    <button>the count of layers stacked onto a chip</button>
+    <p class="explain" hidden>Yield = the fraction of dies that pass testing. At the leading edge it can make or break a node's economics — and high yield is a big part of why TSMC's manufacturing is so hard to match. We'll dig into this in the TSMC lesson.</p>
+  </div>
+
+  <h2>The one idea to keep</h2>
+  <p><mark>A chip is built by repeating a deposit → expose → etch loop 50–100 times to stack transistors and wiring, and the single hardest step in that loop — Expose, i.e. lithography — is controlled by one company.</mark> The physical process and the moat map are the same map.</p>
+
+  <div class="primary-source">
+    <div class="glyph">▶</div>
+    <div>
+      <span class="label">Primary source · watch (~15 min)</span>
+      <strong><a href="https://www.youtube.com/@Asianometry">Asianometry — "How Are Microchips Made?"</a></strong> on YouTube. The clearest visual walkthrough of the fab process; it animates exactly the loop you just learned. Full list in <a href="../RESOURCES.md">RESOURCES.md</a>.
+    </div>
+  </div>
+
+  <div class="lesson-foot">
+    <p><strong>Ask me anything.</strong> <span class="ask">Want a closer look at any single step?</span> — "what's actually in an EUV machine?", "why is yield so hard?", "what does 'doping' do?", "why is packaging suddenly a big deal for AI chips?" Each is a great next lesson.</p>
+    <p style="margin-top:1rem;">Next up → <strong>Lesson 03: The ASML Monopoly — why nobody can copy the Expose step.</strong></p>
+  </div>
+</div>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/interactive.js"></script>
+</body>
+</html>
