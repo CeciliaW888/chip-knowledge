@@ -333,9 +333,16 @@
     <figcaption>A chip in cross-section: transistors at the base, a tower of copper wiring above, sealed in a package. Not to scale — a real chip packs billions of transistors.</figcaption>
   </figure>
 
+  <h2>Why this gets harder every generation — the moat, made of money</h2>
+  <p>Each time the industry shrinks to a smaller <span class="term" data-def="The generation of manufacturing tech, in nanometres. Smaller = newer, denser, and far more expensive to build.">node</span>, the loop above gets harder and the bill gets bigger. The result is the most important number in the whole industry: <strong>how many companies can still afford to play.</strong> Drag the slider and watch it collapse.</p>
+
+  <div data-node-eco></div>
+
+  <p>This is the engine of the foundry moat. At 130 nm, ~30 companies could compete — almost no protection. At the leading edge, the survivors collapse to two or three, because a single chip now costs hundreds of millions just to <em>design</em> (and billions to <em>build</em> a fab for). 📖 Your book《芯片战争》(<strong>Ch. 18</strong>) pins the turning point at <strong>28 nm</strong>: the first time in Moore's Law history that a smaller node made chips <em>more</em> expensive, not less — which is why so many firms quit.</p>
+
   <div class="moat-lens">
     <span class="tag">◆ Moat Lens</span>
-    <p>Every diagram points the same way. The hardest, least-copyable steps — <strong>the Expose step (ASML), process control that keeps yield high (KLA), and running the whole loop at the leading edge (TSMC)</strong> — are exactly the links with the widest moats. When you analyse a chip stock, ask: <em>which step of this picture does the company own, and how many rivals can do that same step?</em> Few rivals → strong moat. Many → commodity.</p>
+    <p>Every diagram points the same way. The hardest, least-copyable steps — <strong>the Expose step (ASML), process control that keeps yield high (KLA), and running the whole loop at the leading edge (TSMC)</strong> — are exactly the links with the widest moats. And the slider shows <em>why</em>: brutal capital intensity keeps the rival count near zero. When you analyse a chip stock, ask: <em>which step of this picture does the company own, how many rivals can do it, and is that number shrinking or growing?</em> Few &amp; shrinking → widening moat. Many &amp; growing → commodity.</p>
   </div>
 
   <h2>Check yourself</h2>
@@ -371,8 +378,18 @@
     <p class="explain" hidden>Yield = the fraction of dies that pass testing. At the leading edge it can make or break a node's economics — and high yield is a big part of why TSMC's manufacturing is so hard to match. We'll dig into this in the TSMC lesson.</p>
   </div>
 
+  <div class="quiz" data-quiz>
+    <span class="qnum">Q4</span>
+    <p class="q">As the process node shrinks toward the leading edge, the number of companies able to manufacture there —</p>
+    <button data-correct>collapses, from dozens down to a few</button>
+    <button>stays steady as new rivals keep up</button>
+    <button>grows, since the tools get cheaper</button>
+    <button>doubles at each new smaller node</button>
+    <p class="explain" hidden>It collapses — ~30 at 130nm, ~10 at 28nm, just 4 at 7nm (《芯片战争》ch.18). Cost explodes while survivors vanish, and that scarcity is exactly what makes the leading-edge foundry moat so wide.</p>
+  </div>
+
   <h2>The one idea to keep</h2>
-  <p><mark>A chip is built by repeating a deposit → expose → etch loop 50–100 times to stack transistors and wiring, and the single hardest step in that loop — Expose, i.e. lithography — is controlled by one company.</mark> The physical process and the moat map are the same map.</p>
+  <p><mark>A chip is built by repeating a deposit → expose → etch loop 50–100 times to stack transistors and wiring, and the single hardest step in that loop — Expose, i.e. lithography — is controlled by one company.</mark> The physical process and the moat map are the same map — and every node shrink makes that map harder to copy.</p>
 
   <div class="primary-source">
     <div class="glyph">▶</div>
@@ -389,5 +406,6 @@
 </div>
 <script src="../assets/quiz.js"></script>
 <script src="../assets/interactive.js"></script>
+<script src="../assets/node-economics.js"></script>
 </body>
 </html>

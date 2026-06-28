@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 3 — Memory: DRAM, NAND, HBM &amp; the Moat Asterisk</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs">Semiconductor Investing · Lesson 03 · <a href="../reference/glossary.html">Glossary</a></div>
+  <p class="eyebrow">Lesson 03 · The Commodity That Got an Asterisk</p>
+  <h1>Memory: DRAM, NAND, HBM &amp; Why Micron Is Suddenly Wanted</h1>
+  <p class="lede">Last lesson I rated memory the <em>thinnest</em> moat on the whole chain — a price-driven commodity. So why are investors crowding into Micron right now? Because one corner of memory just stopped behaving like a commodity. That exception, and how to tell it from a mirage, is today's single win.</p>
+
+  <h2>The honest tension</h2>
+  <p>In <a href="0001-the-value-chain-where-moats-hide.html">Lesson 01</a> the very last bar on the staircase was <em>"Commodity memory — cyclical, ●○○○○"</em>, with <span class="ticker">MU</span> (Micron) as the example. The logic still holds: memory is mostly sold on price. Yet in 2026 Micron's stock and order book are red-hot, with its entire year of premium memory <strong>sold out</strong> in advance.<sup><a href="#s1">1</a></sup></p>
+  <p>That isn't a contradiction — it's the most useful nuance in memory investing. To see it, you first need to know that "memory" is really <strong>three different products</strong>.</p>
+
+  <h2>The three kinds of memory</h2>
+  <p>Tap each one. Notice the moat rating change on the third — that jump is the whole lesson.</p>
+
+  <div data-explore>
+    <div class="chain">
+      <div class="link-chip" data-pick="dram"><span class="lc-num">1</span><span class="lc-name">DRAM</span></div>
+      <div class="link-chip" data-pick="nand"><span class="lc-num">2</span><span class="lc-name">NAND</span></div>
+      <div class="link-chip" data-pick="hbm"><span class="lc-num">3</span><span class="lc-name">HBM</span></div>
+    </div>
+    <p class="explore-hint">Tap each type to see what it does, who makes it, and how wide its moat is.</p>
+
+    <div class="card exp-panel exp-empty" data-panel="">Tap a memory type above. The first two are classic commodities — watch what happens to the moat dots on the third.</div>
+
+    <div class="card exp-panel" data-panel="dram" hidden>
+      <div class="panel-head"><h4>1 · DRAM — the working desk</h4><span class="chokebadge weak">Commodity</span></div>
+      <p class="panel-meta">Moat <span class="moat"><span class="on">●</span><span class="off">●●●●</span></span> · <span class="ticker">MU · Samsung · SK Hynix</span></p>
+      <p><strong>Dynamic RAM</strong> is the fast, short-term <span class="term" data-def="Loses its contents the instant power is cut — it only holds data while energised.">volatile</span> memory a computer actively works in — the open desk where today's data sits while the processor uses it. Fast but forgetful: power off, it's blank. A stick of DDR5 from any of the three makers is interchangeable, so it's bought on price. <em>This</em> is the commodity from Lesson 01.</p>
+    </div>
+    <div class="card exp-panel" data-panel="nand" hidden>
+      <div class="panel-head"><h4>2 · NAND — the filing cabinet</h4><span class="chokebadge weak">Commodity</span></div>
+      <p class="panel-meta">Moat <span class="moat"><span class="on">●</span><span class="off">●●●●</span></span> · <span class="ticker">MU · Samsung · SK Hynix · Kioxia</span></p>
+      <p><strong>NAND flash</strong> is <span class="term" data-def="Keeps its contents with the power off — it remembers. The opposite of volatile.">non-volatile</span> storage — the filing cabinet that <em>remembers</em> when the power's off. It's what's inside SSDs and phones. Slower than DRAM, far cheaper per gigabyte, and even <em>more</em> of a price-war commodity — it has a fourth and fifth maker, so margins are usually the thinnest in memory.</p>
+    </div>
+    <div class="card exp-panel" data-panel="hbm" hidden>
+      <div class="panel-head"><h4>3 · HBM — DRAM, stacked for AI</h4><span class="chokebadge">Re-rating</span></div>
+      <p class="panel-meta">Moat <span class="moat"><span class="on">●●●</span><span class="off">●●</span></span> · <span class="ticker">SK Hynix · MU · Samsung</span></p>
+      <p><strong>High-Bandwidth Memory</strong> isn't a new chemistry — it's ordinary DRAM dies <em>stacked vertically</em> (8–12 high) and wired to the processor through thousands of microscopic vertical connections. It sits right next to an AI GPU and feeds it data at colossal speed. It is <em>hard</em> to manufacture, <em>designed-in</em> alongside the customer's chip, and currently <strong>sold out</strong>. That's why its moat dots are different from its own cousins above.</p>
+    </div>
+  </div>
+
+  <p style="font-size:0.9rem;color:var(--ink-faint);">📖 Your book《芯片战争》covers the memory wars — Japan vs. Korea vs. Micron — in <strong>Chapters 4, 8 &amp; 10</strong>: the original story of how DRAM became a brutal commodity in the first place.</p>
+
+  <h2>Why HBM breaks the commodity rule</h2>
+  <p>An AI GPU is a glutton: it can crunch numbers far faster than ordinary memory can deliver them. The processor ends up <em>starving</em>, waiting on data — engineers call this the <span class="term" data-def="The growing gap between how fast a processor computes and how fast memory can feed it data.">memory wall</span>. HBM smashes through it by trading a long, thin pipe for a short, enormously wide one:</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 720 300" role="img" aria-label="Ordinary DRAM feeds a processor through a narrow bus; HBM stacks memory beside the processor with an ultra-wide bus">
+      <!-- LEFT: ordinary DRAM, thin pipe -->
+      <g class="t-label" font-size="10" text-anchor="middle"><text x="180" y="26">ORDINARY DRAM</text></g>
+      <rect class="svg-card" x="60" y="44" width="90" height="40" rx="6" stroke-width="1"/>
+      <text class="t-mono" x="105" y="68" font-size="10" text-anchor="middle">DDR5</text>
+      <!-- thin bus -->
+      <line class="svg-flow" x1="150" y1="64" x2="250" y2="64" stroke-width="2"/>
+      <rect class="svg-cream" x="250" y="40" width="90" height="120" rx="6" stroke-width="1"/>
+      <text class="t-title" x="295" y="96" font-size="11" text-anchor="middle">CPU /</text>
+      <text class="t-title" x="295" y="112" font-size="11" text-anchor="middle">GPU</text>
+      <text class="t-label" x="200" y="56" font-size="8.5" text-anchor="middle">64-bit</text>
+      <text class="t-label" x="200" y="86" font-size="8.5" text-anchor="middle">narrow</text>
+
+      <!-- RIGHT: HBM, fat pipe, stacked -->
+      <g class="t-label" font-size="10" text-anchor="middle"><text x="560" y="26">HBM</text></g>
+      <!-- stack of dies -->
+      <g>
+        <rect class="svg-accent-soft" x="440" y="44" width="90" height="14" rx="2"/>
+        <rect class="svg-accent-soft" x="440" y="62" width="90" height="14" rx="2"/>
+        <rect class="svg-accent-soft" x="440" y="80" width="90" height="14" rx="2"/>
+        <rect class="svg-accent-soft" x="440" y="98" width="90" height="14" rx="2"/>
+        <rect class="svg-accent-soft" x="440" y="116" width="90" height="14" rx="2"/>
+        <rect class="svg-accent-soft" x="440" y="134" width="90" height="14" rx="2"/>
+      </g>
+      <text class="t-mono" x="485" y="166" font-size="9" text-anchor="middle">DRAM ×8–12</text>
+      <!-- fat bus: many lines -->
+      <g class="svg-flow" stroke-width="2">
+        <line x1="530" y1="50" x2="600" y2="50"/><line x1="530" y1="62" x2="600" y2="62"/>
+        <line x1="530" y1="74" x2="600" y2="74"/><line x1="530" y1="86" x2="600" y2="86"/>
+        <line x1="530" y1="98" x2="600" y2="98"/><line x1="530" y1="110" x2="600" y2="110"/>
+        <line x1="530" y1="122" x2="600" y2="122"/><line x1="530" y1="134" x2="600" y2="134"/>
+      </g>
+      <rect class="svg-accent" x="600" y="40" width="80" height="120" rx="6"/>
+      <text x="640" y="96" font-size="11" text-anchor="middle" fill="#fff" font-family="Geist" font-weight="600">AI</text>
+      <text x="640" y="112" font-size="11" text-anchor="middle" fill="#fff" font-family="Geist" font-weight="600">GPU</text>
+      <text class="t-mono" x="565" y="186" font-size="8.5" text-anchor="middle">1,024-bit ultra-wide</text>
+    </svg>
+    <figcaption>Same silicon, different geometry. Stacking DRAM next to the GPU and bonding it with a 1,024-bit bus moves data ~15× faster than a normal memory channel — feeding the glutton instead of starving it.</figcaption>
+  </figure>
+
+  <p>Three things flow from that picture, and together they un-commoditise HBM:</p>
+  <div class="flow">
+    <div class="flow-node"><span class="step-k">Hard to make</span><h4>Yields are low, packaging is advanced</h4><p>Stacking a dozen wafer-thin dies and threading thousands of vertical connections through them wrecks yields. Most makers <em>can't</em> do it well — so supply is scarce by nature, not by cartel.</p></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node"><span class="step-k">Designed-in</span><h4>Qualified alongside the customer's GPU</h4><p>HBM is co-engineered and tested with the specific accelerator (e.g. NVIDIA's). Once you're <em>in</em> a design, you're not swapped out mid-generation on price — the opposite of interchangeable.</p></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node"><span class="step-k">Three makers only</span><h4>A genuine oligopoly with a waitlist</h4><p>Only SK Hynix, Micron and Samsung make HBM at all — and 2026 output is pre-sold. Scarce supply + concentrated skill = real pricing power, for now.</p></div>
+  </div>
+
+  <h2>So why Micron, <em>right now</em>?</h2>
+  <p>Micron <span class="ticker">(MU)</span> is one of only three companies on Earth that can make HBM — and it's gaining, having overtaken Samsung to roughly <strong>21%</strong> of the HBM market behind SK Hynix's ~62%.<sup><a href="#s2">2</a></sup> But the demand surge has <em>two</em> engines, and the second is the clever part:</p>
+
+  <div class="card">
+    <h3>The 2026 squeeze, in four numbers</h3>
+    <table>
+      <tbody>
+        <tr><td><strong>Sold out</strong></td><td>Micron's entire 2026 HBM output is committed under long-term contracts before the year is out.<sup><a href="#s1">1</a></sup></td></tr>
+        <tr><td><strong>~93%</strong></td><td>Share of the big three's combined capacity now tilted toward HBM for AI — starving ordinary DRAM supply.<sup><a href="#s1">1</a></sup></td></tr>
+        <tr><td><strong>+90%</strong></td><td>Jump in ordinary DRAM prices in Q1 2026 vs. the prior quarter, as that starved supply collides with demand.<sup><a href="#s3">3</a></sup></td></tr>
+        <tr><td><strong>$60–100</strong></td><td>Price of one HBM3E module — vs. roughly <strong>$5–10</strong> for the same capacity of plain DDR5.<sup><a href="#s1">1</a></sup></td></tr>
+      </tbody>
+    </table>
+    <p style="margin:0.4rem 0 0;font-size:0.92rem;color:var(--ink-soft);">Engine one: HBM itself sells at a huge premium and is sold out. Engine two: making all that HBM <em>consumes the factory space</em> that used to make ordinary DRAM — so even the boring commodity is now scarce and spiking. Micron wins on the premium product <em>and</em> on the shortage it helped create.</p>
+  </div>
+
+  <h2>Now re-rate the moat — carefully</h2>
+  <p>Here's the payoff, drawn the same way as Lesson 01's staircase. The same product family, split in two:</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 720 180" role="img" aria-label="Commodity memory has a thin moat; HBM today has a wider but not permanent moat">
+      <g class="svg-line" stroke-width="1" stroke-dasharray="2 4">
+        <line x1="250" y1="30" x2="250" y2="150"/><line x1="314" y1="30" x2="314" y2="150"/>
+        <line x1="378" y1="30" x2="378" y2="150"/><line x1="442" y1="30" x2="442" y2="150"/>
+        <line x1="506" y1="30" x2="506" y2="150"/><line x1="570" y1="30" x2="570" y2="150"/>
+      </g>
+      <g class="t-label" font-size="9" text-anchor="middle"><text x="250" y="22">thin</text><text x="570" y="22">wide</text></g>
+      <!-- commodity DRAM/NAND: 1 unit -->
+      <g>
+        <text class="t-title" x="14" y="58" font-size="12">Commodity DRAM / NAND</text>
+        <text class="t-mono" x="14" y="72" font-size="9">sold on price</text>
+        <rect class="svg-cream" x="250" y="50" width="320" height="18" rx="9" stroke-width="1"/>
+        <rect class="svg-accent" x="250" y="50" width="64" height="18" rx="9"/>
+        <text class="t-mono" x="324" y="63" font-size="9.5">cyclical</text>
+      </g>
+      <!-- HBM today: 3 units -->
+      <g transform="translate(0,56)">
+        <text class="t-title" x="14" y="58" font-size="12">HBM, today</text>
+        <text class="t-mono" x="14" y="72" font-size="9">scarce · designed-in</text>
+        <rect class="svg-cream" x="250" y="50" width="320" height="18" rx="9" stroke-width="1"/>
+        <rect class="svg-accent" x="250" y="50" width="192" height="18" rx="9"/>
+        <text class="t-mono" x="452" y="63" font-size="9.5">pricing power</text>
+      </g>
+    </svg>
+    <figcaption>The same maker (MU) sells both bars. HBM earns a wider moat than its commodity cousins — but notice it stops well short of a chokepoint. The dashed line is where the danger lives.</figcaption>
+  </figure>
+
+  <div class="moat-lens">
+    <span class="tag">◆ Moat Lens</span>
+    <p>HBM's moat is <strong>real but conditional</strong>. It rests on scarce supply and being designed-in — not on a structural lock like ASML's EUV or TSMC's process. Three forces can erode it: <strong>(1)</strong> the makers are spending enormously to add capacity (Micron alone plans ~$200B<sup><a href="#s1">1</a></sup>) — and new capacity is how every memory boom has historically ended in glut; <strong>(2)</strong> the buyer is concentrated — sell mostly to NVIDIA and NVIDIA holds the whip; <strong>(3)</strong> it's still <em>memory</em>, so the cycle is delayed, not repealed. Your job from Lesson 01's mission: <mark>don't mistake a cyclical peak — even a spectacular one — for a permanent moat.</mark> HBM is exactly the test case that skill exists for.</p>
+  </div>
+
+  <h2>Check yourself</h2>
+  <p>Pull these from memory — no scrolling back. The effort is what makes it stick.</p>
+
+  <div class="quiz" data-quiz>
+    <span class="qnum">Q1</span>
+    <p class="q">What is HBM, most precisely?</p>
+    <button data-correct>Ordinary DRAM dies stacked and wired for speed</button>
+    <button>A brand-new storage chemistry that beats flash</button>
+    <button>A faster kind of NAND flash used in fast SSDs</button>
+    <button>A processor that NVIDIA designs for AI servers</button>
+    <p class="explain" hidden>HBM is the <em>same</em> DRAM silicon, stacked vertically and bonded to the processor with a very wide bus — not a new material, and not storage (that's NAND). Because it's hard to make and designed-in, it escapes the pure-commodity trap that plain DRAM sits in.</p>
+  </div>
+
+  <div class="quiz" data-quiz>
+    <span class="qnum">Q2</span>
+    <p class="q">Why are <em>ordinary</em> DRAM prices spiking in 2026, not just HBM?</p>
+    <button data-correct>Makers shifted capacity to HBM, starving plain DRAM</button>
+    <button>A new export ban suddenly removed Chinese supply</button>
+    <button>Consumers abruptly bought far more laptops and phones</button>
+    <button>Micron quietly closed two of its older memory plants</button>
+    <p class="explain" hidden>Roughly 93% of the big three's capacity tilted to HBM for AI, which consumes the fab space that used to make commodity DRAM. Less ordinary supply meets steady demand → prices jumped ~90% in a quarter. Micron benefits from both the premium product and the shortage.</p>
+  </div>
+
+  <div class="quiz" data-quiz>
+    <span class="qnum">Q3</span>
+    <p class="q">What most threatens HBM's current moat over the next cycle?</p>
+    <button data-correct>The makers add capacity until supply gluts again</button>
+    <button>ASML refuses to sell them lithography machines</button>
+    <button>Investors lose all interest in AI data-center chips</button>
+    <button>Synopsys and Cadence enter the memory business</button>
+    <p class="explain" hidden>HBM's moat is scarcity-based, and every memory boom in history has ended when makers over-invested into a glut — Micron's own ~$200B expansion is the seed of that. The other options aren't the live risk: the chokepoint that protects HBM is its <em>own</em> tight, hard-to-build capacity, not lithography or EDA.</p>
+  </div>
+
+  <h2>The one idea to keep</h2>
+  <p>If you remember nothing else: <mark>memory is three products — DRAM (working desk), NAND (filing cabinet), HBM (DRAM stacked for AI) — and only HBM has temporarily escaped commodity status, on scarcity and design-in, not on a permanent lock.</mark> Micron is wanted because it sells the scarce premium product <em>and</em> rides the shortage that making it creates. The investor's discipline is to ask whether that's a re-rating or a peak. Next lesson we'll build the tool for exactly that judgement: <strong>reading the semiconductor cycle, so you never buy the top thinking it's a moat.</strong></p>
+
+  <h2>Sources</h2>
+  <ol style="font-size:0.85rem;color:var(--ink-soft);line-height:1.5;">
+    <li id="s1"><a href="https://www.cnbc.com/2026/01/10/micron-ai-memory-shortage-hbm-nvidia-samsung.html">CNBC — "AI memory is sold out, causing an unprecedented surge in prices" (Jan 2026)</a>, and <a href="https://finance.yahoo.com/news/micron-sold-2026-hbm-us-231248051.html">Yahoo Finance — "Micron's Sold-Out 2026 HBM and ~US$200B Bet on AI Demand"</a>.</li>
+    <li id="s2"><a href="https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share">Counterpoint Research — Global DRAM &amp; HBM market share</a>; <a href="https://www.astutegroup.com/news/general/sk-hynix-holds-62-of-hbm-micron-overtakes-samsung-2026-battle-pivots-to-hbm4/">Astute Group — "SK Hynix holds 62% of HBM, Micron overtakes Samsung."</a></li>
+    <li id="s3"><a href="https://spectrum.ieee.org/dram-shortage">IEEE Spectrum — "AI Boom Fuels DRAM Shortage and Price Surge."</a></li>
+  </ol>
+
+  <div class="primary-source">
+    <div class="glyph">▶</div>
+    <div>
+      <span class="label">Primary source · watch / read this week</span>
+      <strong><a href="https://www.youtube.com/@Asianometry">Asianometry (YouTube)</a></strong> — search his channel for the HBM / high-bandwidth-memory explainer: the clearest plain-language tour of <em>why</em> stacking is so hard and why only three firms manage it. For the live "why now," skim the <a href="https://www.cnbc.com/2026/01/10/micron-ai-memory-shortage-hbm-nvidia-samsung.html">CNBC piece</a> above. Full list in <a href="../RESOURCES.md">RESOURCES.md</a>.
+    </div>
+  </div>
+
+  <div class="lesson-foot">
+    <p><strong>This is a conversation, not a lecture.</strong> <span class="ask">I'm your teacher — ask me anything that's unclear:</span> "is SK Hynix the better moat play than Micron?", "what's HBM4 and why does it matter?", "how would I see this shortage in Micron's 10-K?" Your follow-ups aim the next lesson.</p>
+    <p style="margin-top:1rem;">Next up → <strong>Lesson 04: Reading the semiconductor cycle — telling a peak from a moat.</strong></p>
+  </div>
+</div>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/interactive.js"></script>
+</body>
+</html>

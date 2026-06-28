@@ -13,6 +13,7 @@ than memorizing trivia.
 |---|--------|--------------|
 | 01 | [The value chain — where moats hide](lessons/0001-the-value-chain-where-moats-hide.html) | The ~7 segments of the chip value chain and which choke points hold durable advantage. |
 | 02 | [How a chip is made](lessons/0002-how-a-chip-is-made.html) | The manufacturing flow — and why certain steps (e.g. EUV lithography) are monopolies. |
+| 03 | [Memory — DRAM, NAND, HBM &amp; the moat asterisk](lessons/0003-memory-dram-nand-hbm-and-the-moat-asterisk.html) | Why memory is mostly a commodity — and how HBM (and Micron's demand) is the exception that tests the rule. |
 
 Plus a [glossary](reference/glossary.html) and a
 [book index](reference/book-index-chip-war-yusheng.md) for deeper reading.
